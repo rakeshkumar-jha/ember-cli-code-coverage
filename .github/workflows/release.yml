@@ -1,0 +1,27 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: auto-dist-tag
+        run: npx auto-dist-tag@1 --write
+        working-directory: packages/ember-cli-code-coverage
+
+      - run: npm publish
+        working-directory: packages/ember-cli-code-coverage
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
