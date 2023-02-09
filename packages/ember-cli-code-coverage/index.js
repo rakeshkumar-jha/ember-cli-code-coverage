@@ -174,15 +174,13 @@ module.exports = {
           ? addon.root
           : path.join(this.project.root, 'lib', addon.name);
 
-      let addonAppDir = path.join(addonDir, 'app');
       let addonAddonDir = path.join(addonDir, 'addon');
       const addonAddonTestSupportDir = path.join(addonDir, 'addon-test-support');
 
       return [
         ...acc,
         ...this._getIncludesForDir(addonAddonTestSupportDir, `${addon.name}/test-support`),
-        ...this._getIncludesForDir(addonAddonDir, addon.name),
-        ...this._getIncludesForDir(addonAppDir, this.parent.name()),
+        ...this._getIncludesForDir(addonAddonDir, addon.name)
       ];
     }, []);
   },
