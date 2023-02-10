@@ -11,6 +11,8 @@ Please check tags it will be generate a tag like below
 
 ```ember-cli-code-coverage-v<version>-gitpkg```
 
+- install in app like eg:
+```yarn add ember-cli-code-coverage@git+ssh://git@github.com/rakeshkumar-jha/ember-cli-code-coverage.git#ember-cli-code-coverage-v1.0.3-gitpkg```
 ---
 NOTE: 
 
