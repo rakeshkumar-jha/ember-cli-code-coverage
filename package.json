@@ -2,7 +2,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git@github.com:kategengler/ember-cli-code-coverage.git"
+    "url": "git+ssh://git@github.com/rakeshkumar-jha/ember-cli-code-coverage.git"
   },
   "workspaces": [
     "packages/*",
@@ -65,5 +65,6 @@
     },
     "npm": false
   },
-  "version": "1.0.3"
+  "version": "1.0.3",
+  "name": "ember-cli-code-coverage"
 }
